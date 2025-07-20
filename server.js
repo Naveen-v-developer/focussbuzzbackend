@@ -15,10 +15,12 @@ dotenv.config();
 const app = express();
 
 // ✅ CORS Middleware BEFORE all routes
+
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: ['http://localhost:3000', 'https://focusbuzzfrontend.vercel.app'],
   credentials: true,
 }));
+
 
 // Body parser
 app.use(express.json());
